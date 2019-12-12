@@ -430,6 +430,8 @@ export const JobSubmissionPage = ({
                     onSelect={selectData}
                     jobName={jobInformation.name}
                     onChange={setJobData}
+                    extras={extras}
+                    onExtrasChange={setExtras}
                     storageConfigs={storageConfigs}
                   />
                   <ToolComponent
