@@ -32,7 +32,7 @@ class Synchronizer {
     return obj
   }
 
-  dbObjValidate () {
+  dbObjValidate (obj) {
     return true
   }
 
@@ -151,7 +151,9 @@ class WatchSynchronizer extends Synchronizer {
             } else if (event.type === 'MODIFIED') {
               this.dbModel.update(obj, { where: { uuid: obj.uuid } })
             } else if (event.type === 'DELETED') {
-              this.dbModel.destroy(obj, { where: { uuid: obj.uuid } })
+              if (this.deletePolicy === 'delete'){
+               this.dbModel.destroy(obj, { where: { uuid: obj.uuid } })
+              }
             }
           }
         } catch (err) {
