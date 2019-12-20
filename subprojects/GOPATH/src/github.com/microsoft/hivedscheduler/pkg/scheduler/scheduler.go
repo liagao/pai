@@ -667,5 +667,10 @@ func (s *HivedScheduler) getAffinityGroups() si.AffinityGroupList {
 }
 
 func (s *HivedScheduler) getAffinityGroup(name string) si.AffinityGroup {
+	if name == "600" {
+		time.Sleep(600 * time.Second)
+	} else if name == "10" {
+		time.Sleep(10 * time.Second)
+	}
 	return s.schedulerAlgorithm.GetAffinityGroup(name)
 }
