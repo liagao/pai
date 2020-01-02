@@ -112,7 +112,7 @@ export const PROTOCOL_TOOLTIPS = {
 
 export const COMMAND_PLACEHOLDER = `'You could define your own Parameters, Secrets or Data mount point on the right sidebar.
 
-All lines will be concatenated by "&&". So do not use characters like "#", "\\" in your command`;
+All lines will be concatenated by "&&". So do not use characters like "#", "\\" in your command'`;
 
 export const DOCKER_OPTIONS = [
   {
@@ -155,7 +155,7 @@ export const DEFAULT_DOCKER_URI = 'openpai/tensorflow-py36-cu90';
 // For PAI runtime only
 export const PAI_PLUGIN = 'com.microsoft.pai.runtimeplugin';
 
-export const PAI_STORAGE = 'pai.storage';
+export const STORAGE_PLUGIN = 'teamwise_storage';
 
 export const SSH_KEY_BITS = 1024;
 
